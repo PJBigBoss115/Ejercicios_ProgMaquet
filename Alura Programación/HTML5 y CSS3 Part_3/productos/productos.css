@@ -1,0 +1,103 @@
+header{
+    background: skyblue;
+    padding: 20px 0;
+}
+
+.caja{
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+}
+
+#icono{
+    width: 20%;
+}
+
+nav{
+    position: absolute;
+    top: 25%;
+    right: 0;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 100%;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: yellow;
+    text-decoration: underline;
+}
+
+.productos{
+    width: 70%;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.productos li:hover{
+    border-color: skyblue;
+}
+
+.productos li:active{
+    border-color: red;
+}
+
+.productos h2{
+    font-size: 90%;
+    font-weight: bold;
+}
+
+.productos li:hover h2{
+    font-size: 100%;
+}
+
+.productos img{
+    width: 100%;
+}
+
+.producto-descripcion{
+    font-size: 70%;
+}
+
+.producto-precio{
+    font-size: 80%;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    background: url(pie/ida-uxvideojuegos-blog.png);
+    padding: 40px;
+}
+
+footer img{
+    width: 20%;
+}
+
+.copyrignt{
+    color: white;
+    font-size: 13px;
+    margin: 20px;
+}

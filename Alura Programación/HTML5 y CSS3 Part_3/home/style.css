@@ -1,0 +1,55 @@
+#banner{
+    width: 100%;
+}
+
+.titulo-principal{
+    padding-left: 5%;
+}
+
+.inicio{
+    background: skyblue;
+    padding: 5px;
+}
+
+.tituloCentrado{
+    text-align: center;
+    font-size: 25px;
+    border: 5px solid black;
+    background: white;
+    padding: 5px;
+    margin: 35px;
+}
+
+p{
+    text-align: center;
+    font-size: 15px;
+    margin: 10px;
+}
+
+em{
+    color: red;
+}
+
+#resaltar{
+    font-size: 30px;
+}
+
+.diferenciales{
+    background: white;
+    padding: 5px;
+}
+
+ul{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 10%;
+}
+
+.items{
+    font-style: italic;
+}
+
+.imgDiferenciales{
+    width: 50%;
+}

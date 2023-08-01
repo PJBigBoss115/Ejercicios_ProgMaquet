@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graficacion</title>
+</head>
+<body>
+
+    <h1>Clase 4 400x400</h1>
+
+    <!--En la parte de canvas puedo crear una area para poder
+    utilizar-->
+    <canvas width="400" height="400" ></canvas>
+
+    <script>
+
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        var colores = ["black","white","black","white","black"];
+
+        pincel.fillStyle = "grey";
+        pincel.fillRect(0,0,400,400);
+
+        function notificarClick(evento) {
+            let x = evento.pageX-pantalla.offsetLeft;
+            let y = evento.pageY-pantalla.offsetTop;
+
+            console.log(evento);
+            alert("#--Click--# " + x + "," + y);
+        }
+
+        function dibujarCirculo(x,y,radio) {
+            let j = 0;
+            for(let i = 0; i < colores.length; i++) {
+                pincel.fillStyle = colores[i];
+                pincel.beginPath();
+                pincel.arc(x,y,radio-j,0,2*2*Math.PI);
+                pincel.fill();
+
+                j = j + 6;
+            }
+        }
+
+        function generarXY() {
+            let buscar = true;
+            while(buscar) {
+                let generar = Math.round(Math.random()*380);
+                if(generar > 30 && generar < 370) {
+                    buscar = false;
+                    return generar;
+                }
+            }
+        }
+
+        function limpiarPantalla() {
+            pincel.clearRect(0,0,400,400);
+        }
+
+        var x = 30;
+        var regresar = false;
+
+        function moverCirculo() {
+            limpiarPantalla();
+            dibujarCirculo(generarXY(),generarXY(),30);
+
+            //Ejercicio de rebotar el circulo
+
+            //dibujarCirculo(x,31,30);
+
+            //if(x == 370) {
+            //    regresar = true;
+            //} else if(x == 30) {
+            //    regresar = false;
+            //} 
+
+            //if(regresar) {
+            //    x--
+            //} else {
+            //    x++
+            //}
+
+            //Otra pocion es cambiar regresar por un
+            //valor numerico y asi tener 1 y -1
+            //En los mismos parametros
+
+            //if(x > 600){
+                //sentido = -1;
+            //}else if(x < 0){
+                //sentido = 1;
+            //}
+
+            //Y asi poder sumar o restar ese numero
+
+            //x = x + sentido;
+
+        }
+
+        setInterval(moverCirculo, 1500);
+
+    </script>
+
+</body>
+</html>

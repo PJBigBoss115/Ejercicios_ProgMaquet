@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graficacion</title>
+</head>
+<body>
+
+    <h1>Dibujar un Criepe :v</h1>
+
+    <!--En la parte de canvas puedo crear una area para poder
+    utilizar-->
+    <canvas width="400" height="400" ></canvas>
+
+    <script>
+
+        //El canvas es una pizarra en la cual puedo diseñar
+        //u dibujar
+
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        pincel.fillStyle = "white";
+        pincel.fillRect(0,0,400,400);
+
+        pincel.fillStyle = "darkgreen";
+        pincel.fillRect(50,50,300,300);
+
+        pincel.fillStyle = "black";
+        pincel.fillRect(90,110,80,80);
+
+        pincel.fillStyle = "black";
+        pincel.fillRect(230,110,80,80);
+
+        pincel.fillStyle = "black";
+        pincel.fillRect(125,220,150,80);
+
+        pincel.fillStyle = "black";
+        pincel.fillRect(170,190,60,50);
+
+        pincel.fillStyle = "black";
+        pincel.fillRect(125,250,40,100);
+
+        pincel.fillStyle = "black";
+        pincel.fillRect(235,250,40,100);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa</title>
+</head>
+<body>
+    <!--HTML-->
+    <h1>HTML</h1>
+    La edad de Chistian es ...
+    <br>
+    ?
+    <br>
+    22
+    <br>
+    <!--JavaScript-->
+    <br>
+    <h2>JavaScript</h2>
+    <script>
+
+        //Opcion 1:
+        //alert("La edad de Chistina es ...");
+        //alert("?");
+
+        //Opcion 2:
+        document.write("La edad de Chistian es ...");
+        document.write("<br>");
+        document.write("?");
+        document.write("<br>");
+
+        //Texto
+        document.write("10+12");
+        document.write("<br>");
+
+        //Operacion numerica
+        document.write(10 + 12);
+        document.write("<br>");
+
+        //Concatenar texto con numero
+        document.write("10" + 12);
+        document.write("<br>");
+
+        //Concaternar textos
+        document.write("10" + "12");
+
+        //Nuevo ejercicio Clase 2
+        document.write("<br>");
+        document.write("<br>");
+        document.write("El año de nacimiento de Chistian es...");
+        document.write("<br>");
+        document.write(1992+08);
+
+        //Jerarquia de operaciones
+        document.write("<br>");
+        document.write("<br>");
+        document.write("El promedio de edad de Juan, Pedro y Carlos es...");
+        document.write("<br>");
+        document.write((21+22+23)/3);
+
+        //Una sola linea
+        document.write("<br>");
+        document.write("<br>");
+        document.write("El promedio de edad de Juan, Pedro y Carlos es... " + "<br>" + (21+22+23)/3);
+        
+        //Es recomendable mantener un orden y la identacion del codigo
+        //y no todo el codigo junto.
+        document.write("<br>");
+        document.write("<br>");
+        document.write("Juan nació en el año..");
+        document.write("<br>");
+        document.write(1992+9);
+
+        document.write("<br>");
+        document.write("Pedro nació en el año..");
+        document.write("<br>");
+        document.write(1992+8);
+
+        document.write("<br>");
+        document.write("Carlos nació en el año..");
+        document.write("<br>");
+        document.write(1992+7);
+
+        //Nuevo ejercicio Clase 3
+        document.write("<br>");
+        document.write("<br>");
+        document.write("Juan tiene: " + (2022-2001) + " años");
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("Pedro tiene: " + (2022-2000) + " años");
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("Carlos tiene: " + (2022-1999) + " años");
+
+        //El ejemplo anterior no es practico por lo que vamos
+        //a cambiarlo un poco y empezar a utilizar variables
+
+        //Con una varible tendremos una manera mas sencilla de
+        //poder modificar valores que son utilizados por distintas
+        //instrucciones de codigo.
+        var anho = 2022;
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("Juan tiene: " + (anho-2001) + " años");
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("Pedro tiene: " + (anho-2000) + " años");
+
+        //El codigo es secuencial por lo cual si la varible es modificada
+        //despues de una instruccion el nuevo valor sera solo utilizado
+        //en la instruciones posteriores al cambio.
+        anho = 2030;
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("Carlos tiene: " + (anho-1999) + " años"); 
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("Jimena tiene: " + (anho-1995) + " años");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("Paola tiene: " + (anho-1990) + " años");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("Laura tiene: " + (anho-1992) + " años");
+
+        var promedio = (35+40+38)/3;
+
+        document.write("<br>");
+        document.write("<br>");
+        //Math.round es una funcion para poder redondear decimales
+        document.write("El promedio de las edades de las 3 mujeres es: " + Math.round(promedio));
+
+        //Vamos a utilizar variables para poder guardar la edades
+        anho = 2022;
+
+        var edadJimena = anho - 1995;
+        var edadPaola = anho - 1990;
+        var edadLaura = anho - 1992;
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("Carlos tiene: " + (anho-1999) + " años"); 
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("Jimena tiene: " + edadJimena + " años");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("Paola tiene: " + edadPaola + " años");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("Laura tiene: " + edadLaura + " años");
+
+        promedio = (edadJimena+edadLaura+edadPaola)/3;
+
+        document.write("<br>");
+        document.write("<br>");
+        //Math.round es una funcion para poder redondear decimales
+        document.write("El promedio de las edades de las 3 mujeres es: " + Math.round(promedio));
+
+        //A las varibles tambien se les puede atribuir texto
+
+        var nombre = "Jimena";
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("Hola soy: " + nombre + " y tengo " + edadJimena + " años");
+
+        //ejercicio tabla
+        var valorTabla = 5;
+
+        document.write("<br>");
+        document.write("<br>");
+
+        for(var i = 1; i < 11; i++) {
+            document.write(valorTabla + " por " + i + " = " + valorTabla*i);
+            document.write("<br>");
+        }
+
+        valorTabla = 8;
+
+        document.write("<br>");
+        document.write("<br>");
+
+        for(var i = 1; i < 11; i++) {
+            document.write(valorTabla + " por " + i + " = " + valorTabla*i);
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>

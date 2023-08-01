@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graficacion</title>
+</head>
+<body>
+
+    <h1>Dibujar una escuadra</h1>
+
+    <!--En la parte de canvas puedo crear una area para poder
+    utilizar-->
+    <canvas width="400" height="400" ></canvas>
+
+    <script>
+
+        //El canvas es una pizarra en la cual puedo diseñar
+        //u dibujar
+
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        pincel.fillStyle = "black";
+        pincel.fillRect(0,0,400,400);
+
+        pincel.fillStyle = "white";
+        pincel.beginPath();
+        pincel.moveTo(100,100);
+        pincel.lineTo(100,280);
+        pincel.lineTo(350,280);
+        pincel.fill();
+
+        pincel.fillStyle = "black";
+        pincel.beginPath();
+        pincel.moveTo(125,140);
+        pincel.lineTo(125,260);
+        pincel.lineTo(290,260);
+        pincel.fill();
+
+    </script>
+
+</body>
+</html>

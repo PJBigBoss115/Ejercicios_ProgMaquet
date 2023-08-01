@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graficacion</title>
+</head>
+<body>
+
+    <h1>Dibujar Flor 400x400</h1>
+
+    <!--En la parte de canvas puedo crear una area para poder
+    utilizar-->
+    <canvas width="400" height="400" ></canvas>
+
+    <script>
+
+        //El canvas es una pizarra en la cual puedo diseñar
+        //u dibujar
+
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        pincel.fillStyle = "skyblue";
+        pincel.fillRect(0,0,400,400);
+
+        function dibujarTablero(x, y, color) {
+            //Cuadrados pequeños
+            pincel.fillStyle = color;
+            pincel.fillRect(x,y,50,50);
+
+            pincel.strokeStyle = "black";
+            pincel.strokeRect(x,y,50,50);
+        }
+
+        function dibujarCirculo(x, y, radio, color) {
+            //Dibuja un circulo
+            pincel.fillStyle = color;
+            pincel.beginPath();
+            pincel.arc(x, y, radio, 0, 2*3.14);
+            pincel.fill();
+        }
+
+        for(let i = 150; i <= 250; i = i + 50) {
+            dibujarCirculo(i,200,25,"yellow");
+            for(let j = 150; j <= 250; j = j +50) {
+                dibujarCirculo(200,j,25,"yellow");
+            }
+        }
+
+        dibujarCirculo(200,200 ,25,"black");
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futbol</title>
+</head>
+<body>
+    <h1>Futbol, Calcular puntos</h1>
+
+    <script>
+
+        //Importante el definir el tipo de dato guardado en las variables
+        //y pasar por ejemplo texto a numeros.
+        //ParseInt: Se utliza para comvertir "5" --> 5.
+        var victorias = parseInt(prompt("Ingrese la cantidad de victorias"));
+        var empates = parseInt(prompt("Ingrese la cantidad de empates"));
+
+        var puntuacionAnterior = 28;
+        var puntos = victorias * 3 + empates;
+
+        imprimir("El total de puntos del equipo es: " + puntos);
+
+        //Condicional Si "Si la condicion es verdadera se ejecutar
+        //el bloque de instrucciones"
+        if(puntos > puntuacionAnterior) {
+            imprimir("El equipo mejoro");
+        }else {
+            imprimir("El equipo esta peor");
+        } if(puntos == puntuacionAnterior) {
+            imprimir("Seguimos igual por eso el pais esta en la #$%#%#");
+        }
+
+        //Inicio de funcion
+        function imprimir(texto) {
+            document.write(texto);
+            saltarLinea();
+        }//Fin de funcion
+
+        //Inicio de funcion
+        function saltarLinea() {
+            document.write("<br>");
+            document.write("<br>");
+        }//Fin de funcion
+
+    </script>
+</body>
+</html>

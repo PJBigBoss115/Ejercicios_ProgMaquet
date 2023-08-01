@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promedio</title>
+</head>
+<body>
+    <h1>Calcular la media de las edades</h1>
+
+    <script>
+
+        var edadPadre = 42;
+        var edadMadre = 38;
+        var edadHijo = 15;
+        var edadHija = 12;
+
+        var totalEdades = edadHija + edadHijo + edadMadre + edadPadre;
+        var media = totalEdades/4;
+
+        imprimir("La media de las edades es: " + media);
+
+        var n = parseInt(prompt("Ingrese la cantidad de mienbros de la familia"));
+        var sumarEdades = 0;
+
+        for(let i = 1; i < n+1; i++) {
+            sumarEdades = sumarEdades + parseInt(prompt("Ingrese la edad del familiar: " + i));
+        }
+
+        imprimir("La media de las edades es : "+ (sumarEdades/n));
+
+        var pares = 0;
+
+        while (pares < 100) {
+            pares++
+            pares++
+            imprimir(pares);
+        }
+        imprimir("Fin");
+
+        //Inicio de funcion
+        function imprimir(texto) {
+            document.write(texto);
+            saltarLinea();
+        }//Fin de funcion
+
+        //Inicio de funcion
+        function saltarLinea() {
+            document.write("<br>");
+            document.write("<br>");
+        }//Fin de funcion
+
+    </script>
+</body>
+</html>

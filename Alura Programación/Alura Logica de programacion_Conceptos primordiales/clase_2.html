@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundial</title>
+</head>
+<body>
+    <h1>Años de mundiales</h1>
+    <script>
+
+        var anhoMundial = 1930;
+        var limite = parseInt(prompt("Ingrese el año limite para calcular"));
+
+        //alert("Hubo un mundial de la FIFA en el año: "+anhoMundial);
+
+        //anhoMundial = anhoMundial + 4;
+
+        //alert("Hubo un mundial de la FIFA en el año: "+anhoMundial);
+
+        //Para tareas en las cuales es necesario de la repeticion
+        //de una misma estructura de codigo podemos usar for
+
+        //anhoMundial = 1930;
+
+        //for(let i = 0; i < 12; i++) {
+            
+            //anhoMundial = anhoMundial + 4;
+
+            //alert("Hubo un mundial de la FIFA en el año: "+anhoMundial);
+
+        //}
+
+        //anhoMundial = 1930;
+
+        //Existe el ciclo while el cual es una altermantiva al
+        //ciclo for la cual para detenerlo establecemos un parametro
+        //el cual debe cumplirse.
+
+        while(anhoMundial <= limite) {
+
+            imprimir("Hubo un mundial de la FIFA en el año: "+anhoMundial);
+            anhoMundial = anhoMundial + 4;
+
+        }
+
+        //Inicio de funcion
+        function imprimir(texto) {
+            document.write(texto);
+            saltarLinea();
+        }//Fin de funcion
+
+        //Inicio de funcion
+        function saltarLinea() {
+            document.write("<br>");
+            document.write("<br>");
+        }//Fin de funcion
+
+    </script>
+</body>
+</html>

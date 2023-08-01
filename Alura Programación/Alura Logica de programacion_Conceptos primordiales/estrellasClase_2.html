@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos</title>
+</head>
+<body>
+    <h1>Ciclos Anidados</h1>
+
+    <script>
+
+        for(let i = 1; i <= 3; i++) {
+            for(let j = 1; j <= 10; j++) {
+                imprimir("*");
+            }
+            saltarLinea();
+        }
+
+        saltarLinea();
+        imprimir("Fin");
+
+        //Inicio de funcion
+        function imprimir(texto) {
+            document.write(texto);
+        }//Fin de funcion
+
+        //Inicio de funcion
+        function saltarLinea() {
+            document.write("<br>");
+        }//Fin de funcion
+
+        //Ejercicio Inicio de Sesion
+        var inicioDeSesionRegistrado = "alura";
+        var contrasenhaRegistrada = "alura321";
+
+        var contador = 1;
+        var intentos = 3;
+
+        while(contador <= intentos) {
+
+            var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+            var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+            if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+                alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+                break;
+            } else {
+                if(contador == 3) {
+                    alert("Agotaste el número permitido de intentos!");
+                } else {
+                    alert("inicio de sesión inválido. Favor intente de nuevo");
+                }
+            }
+            contador++
+        }
+
+    </script>
+</body>
+</html>

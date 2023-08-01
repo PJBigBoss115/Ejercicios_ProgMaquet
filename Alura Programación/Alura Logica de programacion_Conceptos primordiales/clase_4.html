@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New_Game</title>
+</head>
+<body>
+
+    <h1>Juego de adivinaza</h1>
+    Existe un numero escondido adivina cual es!
+    <br>
+    <input type="text">
+
+    <button>Vamos!</button>
+
+    <div class="mostrar"></div>
+
+    <script>
+
+        //var secreto = Math.round(Math.random()*10);
+
+        var secretos  = [2, 3, 5, 7, 54, 53, 21, 31];
+
+        var input = document.querySelector("input");
+
+        var button = document.querySelector("button");
+
+        button.onclick = comparar;
+
+        input.focus();
+
+        function comparar() {
+
+            let encontrado = false;
+            for(let i = 0; i < secretos.length; i++) {
+                if(parseInt(input.value) == secretos[i]) {
+                    alert("Correcto");
+                    encontrado = true;
+                    break;
+                }
+            }
+
+            if(encontrado == false) {
+                alert("Sigue probando!");
+            }
+            
+            //secreto = Math.round(Math.random()*10);
+
+            input.value = "";
+            input.focus();
+        }
+
+    </script>
+</body>
+</html>

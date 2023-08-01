@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graficacion</title>
+</head>
+<body>
+
+    <h1>Graficar 400x400</h1>
+
+    <!--En la parte de canvas puedo crear una area para poder
+    utilizar-->
+    <canvas width="400" height="400" ></canvas>
+
+    <script>
+
+        //El canvas es una pizarra en la cual puedo diseñar
+        //u dibujar
+
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        //Chrome = orange
+        //Firefox = yellow
+        //Internet Exploret = blue
+        //Safari = white
+        //Otros = black
+
+        pincel.fillStyle = "skyblue";
+        pincel.fillRect(0,0,400,400);
+
+        var datos = [9, 9, 123, 141, 18];
+        var datos_2 = [12, 9, 9, 27, 243];
+
+        var colores = ["black","white","blue","yellow","orange"];
+        var n = 348;
+
+        escribirTexto(80,n+15,"2009");
+        for(let i = 0; i < datos.length; i++) {
+            n = n - datos[i];
+            dibujarRectangulo(80,n,datos[i],colores[i]);
+        }
+
+        n = 348;
+
+        escribirTexto(225,n+15,"2019");
+        for(let i = 0; i < datos_2.length; i++) {
+            n = n - datos_2[i];
+            dibujarRectangulo(225,n,datos_2[i],colores[i]);
+        }
+
+        //Inicia Funciones
+        function dibujarRectangulo(x, y, altura, color) {
+            pincel.fillStyle=color;
+            pincel.fillRect(x,y, 100, altura);
+            pincel.strokeStyle="black";
+            pincel.strokeRect(x,y, 100, altura);
+        }
+
+        function escribirTexto(x , y, texto) {
+            pincel.font="15px Georgia";
+            pincel.fillStyle="black";
+            pincel.fillText(texto, x, y);    
+        }
+
+    </script>
+
+</body>
+</html>

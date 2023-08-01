@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Programa</h1>
+
+    <script>
+
+        var anho = 2022;
+        //Utiliza varibles para las insturcciones repetitivas
+        var saltoLinea = "<br><br><br>";
+
+        document.write("Juan tiene: " + (anho-2001) + " años");
+        document.write(saltoLinea);
+        document.write("Pedro tiene: " + (anho-2000) + " años");
+        document.write(saltoLinea);
+        document.write("Carlos tiene: " + (anho-1999) + " años");
+        document.write(saltoLinea);
+        
+        //Funciones: Son secciones de codigo que contiene
+        //instrucciones las culaes pueden recibir parametros
+        //o no.
+
+        //Inicia funcion Saltar Linea
+        function saltarLinea() {
+
+            document.write("<br>");
+
+        }
+        //Termina funcion Saltar Linea
+
+        document.write("Juan tiene: " + (anho-2001) + " años");
+        saltarLinea();
+        saltarLinea();
+        document.write("Pedro tiene: " + (anho-2000) + " años");
+        saltarLinea();
+        saltarLinea();
+        saltarLinea();
+        document.write("Carlos tiene: " + (anho-1999) + " años");
+        saltarLinea();
+
+        //Funciones que reciben parametros.
+
+        //Inicia funcion imprimir
+        function imprimir(imprime) {
+
+            document.write("<big>" + imprime + "</big>");
+            saltarLinea();
+            saltarLinea();
+
+        }
+        //Termina funcion imprimir
+
+        //Esto se utiliza para funciones que tengan que utilizar
+        //varibles para operar u manipular.
+
+        saltarLinea();
+
+        imprimir("Hola como estas...");
+
+        imprimir("Juan tiene: " + (anho-2001) + " años");
+
+        imprimir("Pedro tiene: " + (anho-2000) + " años");
+
+        imprimir("Carlos tiene: " + (anho-1999) + " años");
+
+        //Ejercicio Edades de hermanos
+
+        saltarLinea();
+        saltarLinea();
+
+        var anhoActual = 2022;
+
+        var edad = anhoActual - 2000;
+
+        imprimir("Hola soy Pedro tengo " + edad + " años");
+        var edad_2 = anhoActual - 2004;
+        imprimir("Y mi hermana tiene " + edad_2 + " años");
+        imprimir("Son " + (edad - edad_2) + " años de difirencia");
+    </script>
+</body>
+</html>

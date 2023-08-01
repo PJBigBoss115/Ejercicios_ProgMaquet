@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de consumo</title>
+</head>
+<body>
+    <h3>¿Alcohol o gasolina?</h3>
+    <script>
+        document.write("Ejercicio");
+        document.write("<br>");
+        document.write("Calcular la eficiencia de un Vehiculo.");
+
+        var kmRecoridos = 480;
+        var litros = 40;
+        var combustible = "gasolina";
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("El vehiculo utilizo " + litros + "l de " + combustible + " para recorrer " + kmRecoridos + "km.");
+        document.write("<br>");
+
+        var rendimiento = kmRecoridos/litros;
+        document.write("por lo cual realizo " + Math.round(rendimiento) + "km por litro.");
+
+        kmRecoridos = 300;
+        combustible = "alcoho";
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("Ahora el vehiculo utilizo " + litros + "l de " + combustible + " para recorrer " + kmRecoridos + "km.");
+        document.write("<br>");
+
+        rendimiento = kmRecoridos/litros;
+        document.write("por lo cual realizo " + Math.round(rendimiento) + "km por litro.");
+
+    </script>
+</body>
+</html>

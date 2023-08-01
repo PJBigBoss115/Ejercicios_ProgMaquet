@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+<body>
+    <h1>Adivina el numero</h1>
+
+    <script>
+
+        var numeroIngresado = parseInt(prompt("Ingrese un numero de 1-10"));
+
+        var numeroIngresado_2 = parseInt(prompt("Ingrese un numero para el sorteo"));
+
+        var numeroSorteado = loteria(numeroIngresado_2);
+
+        var numeroEscondido = Math.round(Math.random()*10);
+
+        //Esta es una opcion valida mas no la mejor por lo cual
+        //existen else lo cual establece lo que se ejecutara
+        //si la primera condicion no es cumplida
+        if(numeroIngresado == numeroEscondido) {
+            imprimir("Es correcto");
+        }if(numeroIngresado != numeroEscondido) {
+            imprimir("Sigue probando");
+            imprimir("El numero era: " + numeroEscondido);
+        }
+
+        //Esto funciona de la misma forma que el codigo anterior
+        //pero ya no definimos una nueva condicion.
+        //Es importante el poder gestionar este recurso ya que
+        //en algunas ocaciones debe establecer las condiciones
+        //del programa.
+        if(numeroIngresado == numeroEscondido) {
+            imprimir("Es correcto");
+        }else {
+            imprimir("Sigue probando");
+            imprimir("El numero era: " + numeroEscondido);
+        }
+
+        imprimir("El numero del sorteo era: " + numeroSorteado);
+
+        //Inicio de funcion
+        function imprimir(texto) {
+            document.write(texto);
+            saltarLinea();
+        }//Fin de funcion
+
+        //Inicio de funcion
+        function saltarLinea() {
+            document.write("<br>");
+            document.write("<br>");
+        }//Fin de funcion
+
+        //Inicia funcion Loteria
+        function loteria(n) {
+            numeroSorteado = Math.round(Math.random()*n);
+            return numeroSorteado;
+        }
+
+    </script>
+</body>
+</html>

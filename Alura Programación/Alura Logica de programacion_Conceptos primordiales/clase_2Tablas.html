@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLAS</title>
+</head>
+<body>
+
+    <script>
+
+        var n = parseInt(prompt("Ingrese la tabla que desea"));
+        document.write("<h1>Tabla del " + n + " </h1>");
+
+        for(let i = 1; i < 11; i++) {
+            imprimir(n + " X " + i + " = " + (n*i));
+        }
+
+        //Inicio de funcion
+        function imprimir(texto) {
+            document.write(texto);
+            saltarLinea();
+        }//Fin de funcion
+
+        //Inicio de funcion
+        function saltarLinea() {
+            document.write("<br>");
+            document.write("<br>");
+        }//Fin de funcion
+
+    </script>
+</body>
+</html>

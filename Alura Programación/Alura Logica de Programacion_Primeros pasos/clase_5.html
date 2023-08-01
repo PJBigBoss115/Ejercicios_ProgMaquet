@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    <h1>Calcular IMC (Indice de masa corporal)</h1>
+
+    <script>
+
+        //Inicia funcion saltar linea
+        function saltarLinea() {
+
+            document.write("<br>");
+            document.write("<br>");
+
+        }//Termina funcion saltar linea
+
+        //Inicai funcion imprimir
+        function imprimir(texto) {
+
+            document.write(texto);
+            saltarLinea();
+
+        }//Termina funcion imprimir
+
+        var pesoPedro = 200;
+        var alturaPedro = 1.78;
+
+        var imc = pesoPedro / (alturaPedro * alturaPedro);
+
+        imprimir("El IMC de Pedro es: " + Math.round(imc));
+
+        //Crear funcion calcular imc
+
+        //Inicia funcion calcular IMC
+        function calcularIMC(peso, altura) {
+
+            imc = Math.round(peso / (altura * altura));
+
+        }//Termina funcion calcular IMC
+
+        var peso = 165;
+        var altura = 1.75;
+        
+        calcularIMC(peso, altura);
+        imprimir("El IMC de Chistian es: " + imc);
+
+        //Opcion 2:
+        //Inicia funcion calcular IMC
+        function calcularIMC_2(peso, altura) {
+
+            imc = Math.round(peso / (altura * altura));
+            imprimir("El IMC calculado es: " + imc);
+
+        }//Termina funcion calcular IMC
+
+        calcularIMC_2(75, 1.60);
+
+        //Opcion 3:
+        //Inicia funcion calcular IMC
+        function calcularIMC_3(nombre, peso, altura) {
+
+            imc = Math.round(peso / (altura * altura));
+            imprimir("El IMC calculado de " + nombre + " es: " + imc);
+
+        }//Termina funcion calcular IMC
+
+        calcularIMC_3("Juan", 120, 1.70);
+
+        //Ejercicio
+
+        //Inicia funcion calcular IMC
+        function calcularIMC_4(nombre, peso, altura) {
+
+            imc = Math.round(peso / (altura * altura));
+            imprimir("El IMC calculado de " + nombre + " es: " + imc);
+            return imc;
+
+        }//Termina funcion calcular IMC
+
+        var imc_1 = 0;
+        var imc_2 = 0;
+
+        imc_1 = calcularIMC_4("Carlos", 120, 1.80);
+
+        imc_2 = calcularIMC_4("Fernado", 140, 1.75);
+
+        imprimir("El promedio de los IMC es: " + (imc_1+imc_2)/2);
+
+        //Interactuar con el usuario
+
+        var pesoInformado = 0;
+        var alturaInformada = 0;
+
+        var nombre = prompt("Ingrese su nombre");
+        pesoInformado = prompt(nombre + " ingrese su peso");
+        alturaInformada = prompt(nombre + " iJungrese su altura");
+
+        calcularIMC_4(nombre, pesoInformado, alturaInformada);
+
+
+    </script>
+</body>
+</html>

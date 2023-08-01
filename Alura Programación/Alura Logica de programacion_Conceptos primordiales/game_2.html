@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+<body>
+    <h1>Adivina el numero</h1>
+
+    <script>
+
+        var numeroIngresado = 0;
+
+        var numeroEscondido = loteria(10);
+        var contador = 1;
+        var intentos = 3;
+
+        while(contador <= intentos) {
+
+            numeroIngresado = parseInt(prompt("Ingrese un numero de 1-10"));
+
+            if(numeroIngresado == numeroEscondido) {
+                alert("Acertaste!, en el intento " + contador + " el numero es: " + numeroEscondido);
+                break;
+            }else {
+                alert("Sigue probando");                
+            }
+
+            contador++
+
+        }
+
+        if(numeroIngresado == numeroEscondido) {
+            imprimir("Acertaste!3, en el intento " + contador + " el numero es: " + numeroEscondido);
+        }else {
+            imprimir("Sigue probando, Fallo todos los intentos");                
+            imprimir("El numero era: " + numeroEscondido);
+        }
+        imprimir("Fin");
+
+        //Inicio de funcion
+        function imprimir(texto) {
+            document.write(texto);
+            saltarLinea();
+        }//Fin de funcion
+
+        //Inicio de funcion
+        function saltarLinea() {
+            document.write("<br>");
+            document.write("<br>");
+        }//Fin de funcion
+
+        //Inicia funcion Loteria
+        function loteria(n) {
+            numeroSorteado = Math.round(Math.random()*n);
+            return numeroSorteado;
+        }
+
+    </script>
+</body>
+</html>

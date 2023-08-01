@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graficacion</title>
+</head>
+<body>
+
+    <h1>Clase 5 400x400</h1>
+
+    <!--En la parte de canvas puedo crear una area para poder
+    utilizar-->
+    <canvas width="400" height="400" ></canvas>
+
+    <script>
+
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        var colores = ["black","white","black","white","black"];
+
+        var xGenerado = 0;
+        var yGenerado = 0;
+        var radio = 30;
+
+        var valorMinimo = 30;
+        var valorMaximo = 370;
+
+        pincel.fillStyle = "grey";
+        pincel.fillRect(0,0,400,400);
+
+        function disparar(evento) {
+            let x = evento.pageX-pantalla.offsetLeft;
+            let y = evento.pageY-pantalla.offsetTop;
+
+            if(x < xGenerado + radio && x > xGenerado - radio 
+            && y < yGenerado + radio && y > yGenerado - radio) {
+                alert("x<-- Tiro Certero!");
+            }
+        }
+
+        function dibujarCirculo(x,y,radio) {
+            let j = 0;
+            for(let i = 0; i < colores.length; i++) {
+                pincel.fillStyle = colores[i];
+                pincel.beginPath();
+                pincel.arc(x,y,radio-j,0,2*2*Math.PI);
+                pincel.fill();
+
+                j = j + 6;
+            }
+        }
+
+        function generarXY() {
+            let buscar = true;
+            while(buscar) {
+                let generar = Math.round(Math.random()*valorMaximo);
+                if(generar > valorMinimo && generar < valorMaximo) {
+                    buscar = false;
+                    return generar;
+                }
+            }
+        }
+
+        function limpiarPantalla() {
+            pincel.clearRect(0,0,400,400);
+        }
+
+        function moverCirculo() {
+            limpiarPantalla();
+            xGenerado = generarXY();
+            yGenerado = generarXY();
+            dibujarCirculo(xGenerado,yGenerado,radio);
+        }
+
+        setInterval(moverCirculo, 1000);
+        pantalla.onclick = disparar;
+        
+    </script>
+
+</body>
+</html>
